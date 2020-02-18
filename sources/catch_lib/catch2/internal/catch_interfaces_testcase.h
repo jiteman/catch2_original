@@ -10,11 +10,14 @@
 
 #include <vector>
 
+#include "catch_lib.h"
+
+
 namespace Catch {
 
     class TestSpec;
 
-    struct ITestInvoker {
+    struct JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE ITestInvoker {
         virtual void invoke () const = 0;
         virtual ~ITestInvoker();
     };

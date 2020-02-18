@@ -9,11 +9,14 @@
 
 #include "catch_matchers.h"
 
+#include "catch_lib.h"
+
+
 namespace Catch {
 namespace Matchers {
 namespace Exception {
 
-class ExceptionMessageMatcher : public MatcherBase<std::exception> {
+class JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE ExceptionMessageMatcher : public MatcherBase<std::exception> {
     std::string m_message;
 public:
 
@@ -28,7 +31,7 @@ public:
 
 } // namespace Exception
 
-Exception::ExceptionMessageMatcher Message(std::string const& message);
+JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE Exception::ExceptionMessageMatcher Message(std::string const& message);
 
 } // namespace Matchers
 } // namespace Catch

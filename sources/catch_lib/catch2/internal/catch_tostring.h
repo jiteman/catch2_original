@@ -39,7 +39,7 @@ namespace Catch {
 
         JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE extern const std::string unprintableString;
 
-        std::string rawMemoryToString( const void *object, std::size_t size );
+        JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE std::string rawMemoryToString( const void *object, std::size_t size );
 
         template<typename T>
         std::string rawMemoryToString( const T& object ) {
@@ -156,7 +156,7 @@ namespace Catch {
 
 #ifdef CATCH_CONFIG_CPP17_STRING_VIEW
     template<>
-    struct StringMaker<std::string_view> {
+    struct JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE StringMaker<std::string_view> {
         static std::string convert(std::string_view str);
     };
 #endif
@@ -557,27 +557,27 @@ std::string ratio_string<Ratio>::symbol() {
     return rss.str();
 }
 template <>
-struct ratio_string<std::atto> {
+struct JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE ratio_string<std::atto> {
     static std::string symbol();
 };
 template <>
-struct ratio_string<std::femto> {
+struct JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE ratio_string<std::femto> {
     static std::string symbol();
 };
 template <>
-struct ratio_string<std::pico> {
+struct JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE ratio_string<std::pico> {
     static std::string symbol();
 };
 template <>
-struct ratio_string<std::nano> {
+struct JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE ratio_string<std::nano> {
     static std::string symbol();
 };
 template <>
-struct ratio_string<std::micro> {
+struct JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE ratio_string<std::micro> {
     static std::string symbol();
 };
 template <>
-struct ratio_string<std::milli> {
+struct JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE ratio_string<std::milli> {
     static std::string symbol();
 };
 

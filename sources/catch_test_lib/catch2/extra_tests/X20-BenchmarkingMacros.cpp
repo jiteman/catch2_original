@@ -27,7 +27,7 @@ CATCH_TEST_CASE("Benchmark factorial", "[benchmark]") {
     };
 }
 
-CATCH_TEST_CASE("Benchmark containers", "[.][benchmark]") {
+CATCH_TEST_CASE("Benchmark containers (BenchmarkingMacros)", "[.][benchmark]") {
     static const int size = 100;
 
     std::vector<int> v;

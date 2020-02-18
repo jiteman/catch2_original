@@ -41,8 +41,8 @@ namespace Catch {
         result_type operator()();
 
     private:
-        friend bool operator==(SimplePcg32 const& lhs, SimplePcg32 const& rhs);
-        friend bool operator!=(SimplePcg32 const& lhs, SimplePcg32 const& rhs);
+        JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE friend bool operator==(SimplePcg32 const& lhs, SimplePcg32 const& rhs);
+        JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE friend bool operator!=(SimplePcg32 const& lhs, SimplePcg32 const& rhs);
 
         // In theory we also need operator<< and operator>>
         // In practice we do not use them, so we will skip them for now

@@ -121,8 +121,8 @@ namespace Detail {
 } // end namespace Detail
 
 namespace literals {
-    Detail::Approx operator "" _a(long double val);
-    Detail::Approx operator "" _a(unsigned long long val);
+    JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE Detail::Approx operator "" _a(long double val);
+    JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE Detail::Approx operator "" _a(unsigned long long val);
 } // end namespace literals
 
 template<>

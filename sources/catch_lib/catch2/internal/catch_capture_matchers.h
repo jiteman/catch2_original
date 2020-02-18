@@ -17,6 +17,9 @@
 #include "catch_matchers_vector.h"
 #include "catch_stringref.h"
 
+#include "catch_lib.h"
+
+
 namespace Catch {
 
     template<typename ArgT, typename MatcherT>
@@ -44,7 +47,7 @@ namespace Catch {
 
     using StringMatcher = Matchers::Impl::MatcherBase<std::string>;
 
-    void handleExceptionMatchExpr( AssertionHandler& handler, StringMatcher const& matcher, StringRef const& matcherString  );
+    JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE void handleExceptionMatchExpr( AssertionHandler& handler, StringMatcher const& matcher, StringRef const& matcherString  );
 
     template<typename ArgT, typename MatcherT>
     auto makeMatchExpr( ArgT const& arg, MatcherT const& matcher, StringRef const& matcherString  ) -> MatchExpr<ArgT, MatcherT> {

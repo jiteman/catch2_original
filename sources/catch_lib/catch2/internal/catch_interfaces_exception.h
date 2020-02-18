@@ -19,13 +19,16 @@
 #include <string>
 #include <vector>
 
+#include "catch_lib.h"
+
+
 namespace Catch {
     using exceptionTranslateFunction = std::string(*)();
 
     struct IExceptionTranslator;
     using ExceptionTranslators = std::vector<std::unique_ptr<IExceptionTranslator const>>;
 
-    struct IExceptionTranslator {
+    struct JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE IExceptionTranslator {
         virtual ~IExceptionTranslator();
         virtual std::string translate( ExceptionTranslators::const_iterator it, ExceptionTranslators::const_iterator itEnd ) const = 0;
     };

@@ -12,10 +12,13 @@
 
 #include <vector>
 
+#include "catch_lib.h"
+
+
 namespace Catch {
 
     namespace Detail {
-        struct EnumInfo {
+        struct JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE EnumInfo {
             StringRef m_name;
             std::vector<std::pair<int, StringRef>> m_values;
 

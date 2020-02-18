@@ -13,6 +13,9 @@
 
 #include <vector>
 
+#include "catch_lib.h"
+
+
 namespace Catch {
     enum class XmlFormatting {
         None = 0x00,
@@ -23,7 +26,7 @@ namespace Catch {
     XmlFormatting operator | (XmlFormatting lhs, XmlFormatting rhs);
     XmlFormatting operator & (XmlFormatting lhs, XmlFormatting rhs);
 
-    class XmlEncode {
+    class JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE XmlEncode {
     public:
         enum ForWhat { ForTextNodes, ForAttributes };
 
@@ -31,7 +34,7 @@ namespace Catch {
 
         void encodeTo( std::ostream& os ) const;
 
-        friend std::ostream& operator << ( std::ostream& os, XmlEncode const& xmlEncode );
+        JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE friend std::ostream& operator << ( std::ostream& os, XmlEncode const& xmlEncode );
 
     private:
         std::string m_str;

@@ -20,7 +20,21 @@ include_directories( ${${PROJECT_NAME}_DEPENDENCY_DIRS_VAR} )
 
 
 ## this project headers and sources enumeration section
-file( GLOB_RECURSE header_and_source_files ${JMSD_THIS_PROJECT_SOURCE_ROOT}/*.h* ${JMSD_THIS_PROJECT_SOURCE_ROOT}/*.c* )
+file( GLOB_RECURSE header_and_source_files
+	${JMSD_THIS_PROJECT_SOURCE_ROOT}/*.h*
+	${JMSD_THIS_PROJECT_SOURCE_ROOT}/*.c* )
+
+set( FILES_TO_REMOVE_HEADER_AND_SOURCE
+	"extra_tests/X01-PrefixedMacros.cpp"
+	"extra_tests/X02-DisabledMacros.cpp"
+	"extra_tests/X03-DisabledExceptions-DefaultHandler.cpp"
+	"extra_tests/X04-DisabledExceptions-CustomHandler.cpp"
+	"extra_tests/X12-CustomDebugBreakMacro.cpp"
+	"extra_tests/X20-BenchmarkingMacros.cpp"
+	"introspective_tests/InternalBenchmark.tests.cpp" )
+
+JMSD_REMOVE_FILES_FROM_THE_LIST( header_and_source_files FILES_TO_REMOVE_HEADER_AND_SOURCE )
+
 add_library( ${PROJECT_NAME} SHARED ${header_and_source_files} )
 
 

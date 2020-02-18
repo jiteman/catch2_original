@@ -14,9 +14,12 @@
 
 #include <memory>
 
+#include "catch_lib.h"
+
+
 namespace Catch {
 
-    class Session : NonCopyable {
+    class JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE Session : NonCopyable {
     public:
 
         Session();
@@ -41,7 +44,7 @@ namespace Catch {
                 returnCode = run();
             return returnCode;
         }
-    
+
         int run();
 
         clara::Parser const& cli() const;

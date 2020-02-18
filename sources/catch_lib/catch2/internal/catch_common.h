@@ -67,7 +67,7 @@ namespace Catch {
         std::size_t line;
     };
 
-    std::ostream& operator << ( std::ostream& os, SourceLineInfo const& info );
+    JMSD_CATCH_LIBRARY_ORIGINAL_SHARED_INTERFACE std::ostream& operator << ( std::ostream& os, SourceLineInfo const& info );
 
     // Bring in operator<< from global namespace into Catch namespace
     // This is necessary because the overload of operator<< above makes

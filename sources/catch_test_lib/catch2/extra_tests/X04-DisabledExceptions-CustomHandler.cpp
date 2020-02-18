@@ -12,7 +12,7 @@ namespace Catch {
     }
 }
 
-CATCH_TEST_CASE("Tests that run") {
+CATCH_TEST_CASE("Tests that run (CustomHadler)") {
     // All of these should be run and be reported
     CATCH_CHECK(1 == 2);
     CATCH_CHECK(1 == 1);
@@ -22,7 +22,7 @@ CATCH_TEST_CASE("Tests that run") {
 
 
 
-CATCH_TEST_CASE("Tests that abort") {
+CATCH_TEST_CASE("Tests that abort (CustomHadler)") {
     CATCH_REQUIRE(1 == 1);
     CATCH_REQUIRE(1 != 2);
     CATCH_REQUIRE(1 == 3);
