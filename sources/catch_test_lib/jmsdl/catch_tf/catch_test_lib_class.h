@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "jmsdl/catch_ts/catch_lib_class.h"
+#include "jmsdl/catch_tf/catch_lib_class.h"
 
 
 #include "catch_test_lib.h"
