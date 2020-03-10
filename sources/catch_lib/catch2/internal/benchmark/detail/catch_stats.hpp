@@ -11,7 +11,7 @@
 #ifndef TWOBLUECUBES_CATCH_DETAIL_ANALYSIS_HPP_INCLUDED
 #define TWOBLUECUBES_CATCH_DETAIL_ANALYSIS_HPP_INCLUDED
 
-#include "catch2/catch.hpp"
+// #include "catch2/catch.hpp"
 
 #include "../catch_clock.hpp"
 #include "../catch_estimate.hpp"
@@ -20,6 +20,7 @@
 #include <algorithm>
 #include <functional>
 #include <vector>
+#include <iterator>
 #include <numeric>
 #include <tuple>
 #include <cmath>
